@@ -4,11 +4,13 @@
 
 [![Build Status](https://travis-ci.org/lbaole17/krige.ext.svg?branch=master)](https://travis-ci.org/) ![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)
 
+Build on the standard version:  [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/krige)](https://www.r-pkg.org/badges/version/krige)
+
 <!-- badges: end -->
 
 ---
 
-<code> krige.ext</code> is an experimental version of [R](https://www.r-project.org) package [<code>krige</code>]([https://CRAN.R-project.org/package=krige](https://cran.r-project.org/package=krige)) [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/krige)](https://www.r-pkg.org/badges/version/krige), which estimates kriging models for geographical point-referenced data. Method is described in Monogan and Gill (2016), available at <https://doi.org/10.1017/psrm.2015.5>.
+<code> krige.ext</code> is an experimental version of [R](https://www.r-project.org) package [<code>krige</code>]([https://CRAN.R-project.org/package=krige](https://cran.r-project.org/package=krige)), which estimates kriging models for geographical point-referenced data. Method is described in Monogan and Gill (2016), available at <https://doi.org/10.1017/psrm.2015.5>.
 
 ---
 
