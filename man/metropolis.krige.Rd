@@ -6,10 +6,10 @@
        This function performs Metropolis-Hastings sampling for a linear model specified over point-referenced geospatial data. It returns MCMC iterations, with which results of the geospatial linear model can be summarized.
      }
      \usage{
-metropolis.krige(y,X,east,north,powered.exp=2,mcmc.samples=100,
-     spatial.share=0.5,range.share=0.5,beta.var=10,
-     range.tol=0.05,b.tune=1.0,nugget.tune=10.0,psill.tune=1.0,
-     message=NULL, save=NULL, time=NULL, checks=TRUE)
+       metropolis.krige(y,X,east,north,powered.exp=2,mcmc.samples=100,
+            spatial.share=0.5,range.share=0.5,beta.var=10,
+            range.tol=0.05,b.tune=1.0,nugget.tune=10.0,psill.tune=1.0,
+            message=NULL, save=NULL, time=NULL, checks=TRUE)
      }
      \arguments{
             \item{y}{The dependent variable that is used in the kriging model.}
@@ -21,9 +21,9 @@ metropolis.krige(y,X,east,north,powered.exp=2,mcmc.samples=100,
                \item{spatial.share}{Prior for proportion of unexplained variance that is spatial in nature. Must be greater than 0 and less than 1. Defaults to an even split, valued at 0.5.}
                \item{range.share}{Prior for the effective range term, as a proportion of the maximum distance in the data. Users should choose the proportion of distance at which they think the spatial correlation will become negligible. Must be greater than 0. Values greater than 1 are permitted, but users should recognize that this implies that meaningful spatial correlation would persist outside of the convex hull of data. Defaults to half the maximum distance, valued at 0.5.}
                \item{beta.var}{Prior for the variance on zero-meaned normal priors on the regression coefficients. Must be greater than 0. Defaults to 10.}
-               \item{range.tol}{Tolerance term for setting the effective range. At the distance where the spatial correlation drops below this term, it is judged that the effective range has been met. Users are typically advised to leave this at its default value of 0.05 unless they have strong reasons to choose another level. Must be greater than 0 and less than 1.}
-               \item{b.tune}{Tuning parameter for candidate generation of regression coefficients that must be greater than 0. A value of 1 means that draws will be based on the variance-covariance matrix of coefficients from OLS. Larger steps are taken for values greater than 1, and smaller steps are taken for values from 0 to 1. Defaults to 0.1.}
-               \item{nugget.tune}{Tuning parameter for candidate generation of the nugget term (\code{tau2}) that must be greater than 0. A value of 1 means that draws will be based on the typical variance of an inverse gamma distribution. \emph{Smaller} steps are taken for values \emph{greater} than 1, and \emph{larger} steps are taken for \emph{decimal} values from 0 to 1. Defaults to 1.0.}
+               \item{range.tol}{Tolerance term for setting the effective range. At the distance where the spatial correlation drops below this term, it is judged that the effective range has been met. The default value is the commonly-used 0.05. Must be greater than 0 and less than 1.}
+               \item{b.tune}{Tuning parameter for candidate generation of regression coefficients that must be greater than 0. A value of 1 means that draws will be based on the variance-covariance matrix of coefficients from OLS. Larger steps are taken for values greater than 1, and smaller steps are taken for values from 0 to 1. Defaults to 1.0.}
+               \item{nugget.tune}{Tuning parameter for candidate generation of the nugget term (\code{tau2}) that must be greater than 0. A value of 1 means that draws will be based on the typical variance of an inverse gamma distribution. \emph{Smaller} steps are taken for values \emph{greater} than 1, and \emph{larger} steps are taken for \emph{decimal} values from 0 to 1. Defaults to 10.0.}
                \item{psill.tune}{Tuning parameter for candidate generation of the partial sill term (\code{sigma2}) that must be greater than 0. A value of 1 means that draws will be based on the typical variance of an inverse gamma distribution. \emph{Smaller} steps are taken for values \emph{greater} than 1, and \emph{larger} steps are taken for \emph{decimal} values from 0 to 1. Defaults to 1.0.}
                \item{message}{Experimental feature: An integer that specifies the frequency of the reporting of estimates in progress.}
                \item{save}{Experimental feature: An integer that specifies the frequency to save the iterations in progress.}
@@ -58,15 +58,16 @@ covariates<-cbind(1,ContrivedData$x.1,ContrivedData$x.2)
 #set seed
 set.seed(1241060320)
 
-#For simple illustration, we set iterations to 10.
+#For simple illustration, we set to few iterations.
 #In this case, a 10,000-iteration run converges to the true parameters.
 #If you have considerable time and hardware, delete the # on the next line.
 #10,000 iterations took 39 min. with 8 GB RAM & a 1.5 GHz Quad-Core processor.
-M<-10#000
+M<-8
+#M<-10000
 
 #Run the Full Model
 contrived.run<-metropolis.krige(y=ContrivedData$y,X=covariates,range.tol=0.05,
-	east=ContrivedData$s.1,north=ContrivedData$s.2,mcmc.samples=M)
+     east=ContrivedData$s.1,north=ContrivedData$s.2,mcmc.samples=M)
 
 #Delete 20\% for Burn-In
 contrived.run<-contrived.run[(ceiling(0.2*M)+1):M,]

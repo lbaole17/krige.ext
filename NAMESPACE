@@ -5,7 +5,9 @@ export("exponential.semivariogram",
        "krige.pred",
        "krige.posterior",
        "metropolis.krige",
-       "semivariogram")
+       "semivariogram",
+       "mat.tool",
+       "stop.mat.tool")
 importFrom(Rcpp, evalCpp)
 importFrom("stats", "dist", "lm", "median", "quantile", "rbeta", "rgamma", "rnorm", "runif", "resid", "var", "vcov", "ar", "pnorm", "end", "start", "window")
 importFrom("graphics", "axis", "box", "plot")

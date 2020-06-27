@@ -1,6 +1,6 @@
 #Kriging prediction function from Banerjee et al. (2015, p. 169, Eq. 7.5):
 krige.pred<-function(pred.x,pred.east,pred.north,train.y,train.x,train.east,train.north,mcmc.iter,powered.exp=2,credible=NULL,inv.Sigma=NULL){
-	if (TRUE %in% apply(pred.x, 2, function(x) any(is.na(x)))) stop("missing values in 'pred.x'")
+	if (is.matrix(pred.x) && TRUE %in% apply(pred.x, 2, function(x) any(is.na(x)))) stop("missing values in 'pred.x'")
   if (any(is.na(pred.east))) stop("missing values in 'pred.east'")
   if (any(is.na(pred.north))) stop("missing values in 'pred.north'")
   if (any(is.na(train.y))) stop("missing values in 'train.y'")

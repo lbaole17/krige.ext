@@ -77,8 +77,9 @@ ideo <- matrix(ny$ideology,ncol=1)
 # Set Number of Iterations:
 # WARNING: This example was tuned on Amazon Web Services (EC2) over many hours
 # with 150,000 iterations--a strain in 2020 for most desktop machines.
-# A test with 15 iterations (or 150 or 1500) should be more reasonable.
-M<-15#0000 #The comment character constrains this to 15 iterations.
+# A test with few iterations allows illustration.
+M<-5
+#M<-150000 
 set.seed(1,kind="Mersenne-Twister")
 
 # Estimate the Model
@@ -93,10 +94,7 @@ out.mat <- out.mat[(ceiling(0.2*M)+1):M,]
 apply(out.mat,2,quantile,c(0.5,0.05,0.95))
 
 # nonconvergence diagnostics
-# With 15 iterations there is insufficient variance for these tests,
-# so they are currently commented-out.
-# With more iterations (such as 150), these diagnostics will run.
-# We ran these for a 150,000 iteration run.
+# With few iterations there is insufficient variation for these tests.
 #geweke(out.mat)
 #heidel.welch(out.mat)
 

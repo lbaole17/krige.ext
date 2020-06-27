@@ -39,7 +39,7 @@ cor(congCombined$dwnom1,congCombined$krige.cong)
 
 # Plot House Members' DW-NOMINATE Scores against Public Opinion Ideology
 plot(y=congCombined$dwnom1,x=congCombined$krige.cong,
-     xlab="District Ideology (Kriging)", ylab="Legislator Ideology (1st Dim., Common Space)", 
+     xlab="District Ideology (Kriging)", ylab="Legislator Ideology (1st Dim., Common Space)",
      main="U.S. House of Representatives", type="n")
 points(y=congCombined$dwnom1[congCombined$party==200],
      x=congCombined$krige.cong[congCombined$party==200],pch="R",col="red")

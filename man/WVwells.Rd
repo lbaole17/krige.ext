@@ -58,7 +58,6 @@ dimnames(wv.pred)[[2]] <- c("LogElevation", "RockPressure")
 # OLS Model
 fracking.ols<-lm(logGas~wv.pred-1)
 summary(fracking.ols)
-intercept.mod<-lm(logGProd2012~ logElevation+ RockPres,data=WVwells);summary(intercept.mod)
 
 # Set Number of Iterations:
 # WARNING: 50 iterations is intensive on many machines.
@@ -70,7 +69,7 @@ set.seed(1000,kind="Mersenne-Twister")#SET SEED FOR CONSISTENCY
 \dontrun{
 # Trial Run, Linear Model of Ideology with Geospatial Errors Using Metropolis-Hastings:
 wv.mat <- metropolis.krige(y=logGas, X=wv.pred, east=WVwells$UTMESrf, north=WVwells$UTMNSrf,
-     powered.exp=0.5, mcmc.samples=M, spatial.share=0.60, range.share=0.31, beta.var=1000, 
+     powered.exp=0.5, mcmc.samples=M, spatial.share=0.60, range.share=0.31, beta.var=1000,
      range.tol=0.1, b.tune=1, nugget.tune=1, psill.tune=30) 
 
 # Discard first 20\% of Iterations as Burn-In (User Discretion Advised).

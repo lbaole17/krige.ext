@@ -50,15 +50,16 @@ covariates<-cbind(1,ContrivedData$x.1,ContrivedData$x.2)
 #set seed
 set.seed(1241060320)
 
-#For simple illustration, we set iterations to 10.
+#For simple illustration, we set to few iterations.
 #In this case, a 10,000-iteration run converges to the true parameters.
 #If you have considerable time and hardware, delete the # on the next line.
 #10,000 iterations took 39 min. with 8 GB RAM & a 1.5 GHz Quad-Core processor.
-M<-10#000
+M<-8
+#M<-10000
 
 #Run the Full Model
 contrived.run<-metropolis.krige(y=ContrivedData$y,X=covariates,range.tol=0.05,
-	east=ContrivedData$s.1,north=ContrivedData$s.2,mcmc.samples=M)
+     east=ContrivedData$s.1,north=ContrivedData$s.2,mcmc.samples=M)
 
 #Delete 20\% for Burn-In
 contrived.run<-contrived.run[(ceiling(0.2*M)+1):M,]

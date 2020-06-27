@@ -40,7 +40,7 @@ cor(stateCombined$krige.state,stateCombined$dwnom1)
 
 # Plot Senators' DW-NOMINATE Scores against Public Opinion Ideology
 plot(y=stateCombined$dwnom1,x=stateCombined$krige.state,
-     xlab="State Ideology (Kriging)", ylab="Legislator Ideology (1st Dim., Common Space)", 
+     xlab="State Ideology (Kriging)", ylab="Legislator Ideology (1st Dim., Common Space)",
      main="U.S. Senate", type="n")
 points(y=stateCombined$dwnom1[stateCombined$party==200],
      x=stateCombined$krige.state[stateCombined$party==200],pch="R",col="red")

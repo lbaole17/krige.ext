@@ -6,9 +6,9 @@
        This function finds the posterior density of a geospatial linear regression model given a point-referenced geospatial dataset and a set of parameter values. The function is useful for finding the optimum of or for sampling from the posterior distribution.
      }
      \usage{
-krige.posterior(tau2,phi,sigma2,beta,y,X,east,north,semivar.exp=2,
-  p.spatial.share=0.5,p.range.share=0.5,p.range.tol=0.05,p.beta.var=10,
-  tot.var=var(y),local.Sigma=NULL,distance=NULL, max.distance=NULL, checks=TRUE)
+       krige.posterior(tau2,phi,sigma2,beta,y,X,east,north,semivar.exp=2,
+         p.spatial.share=0.5,p.range.share=0.5,p.range.tol=0.05,p.beta.var=10,
+         tot.var=var(y),local.Sigma=NULL,distance=NULL, max.distance=NULL, checks=TRUE)
      }
      \arguments{
         \item{tau2}{Value of the nugget, or non-spatial error variance.}
@@ -52,8 +52,8 @@ contrived.ols<-lm(y~x.1+x.2,data=ContrivedData);summary(contrived.ols)
 covariates<-cbind(1,ContrivedData$x.1,ContrivedData$x.2)
 
 # Find the posterior density for the Contrived Data if all parameters were 1:
-s.test <- krige.posterior(tau2=1, phi=1, sigma2=1, beta=rep(1,ncol(covariates)), y=ContrivedData$y,
-     X=covariates, east=ContrivedData$s.1, north=ContrivedData$s.2)
+s.test <- krige.posterior(tau2=1,phi=1,sigma2=1,beta=rep(1,ncol(covariates)),
+     y=ContrivedData$y,X=covariates,east=ContrivedData$s.1,north=ContrivedData$s.2)
 
 # Print posterior density
 s.test

@@ -37,7 +37,7 @@ cor(upperCombined$np_score,upperCombined$krige.upper,use="complete.obs")
 
 # Plot Legislators' DW-NOMINATE Scores against Public Opinion Ideology
 plot(y=upperCombined$np_score,x=upperCombined$krige.upper,
-     xlab="District Ideology (Kriging)", ylab="Legislator Ideology (Shor & McCarty)", 
+     xlab="District Ideology (Kriging)", ylab="Legislator Ideology (Shor & McCarty)",
      main="State Legislatures: Upper Chambers", type="n")
 points(y=upperCombined$np_score[upperCombined$party=="R"],
      x=upperCombined$krige.upper[upperCombined$party=="R"],pch=".",col="red")
