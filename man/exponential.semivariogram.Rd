@@ -1,0 +1,48 @@
+% File src/library/base/man/load.Rd
+     \name{exponential.semivariogram}
+     \alias{exponential.semivariogram}
+     \title{Parametric Exponential Semivariogram}
+     \description{
+       This function returns the value of a parametric powered exponential semivariogram given the values of the parameters and the distance between observations.
+     }
+     \usage{
+exponential.semivariogram(nugget,decay,partial.sill,distance,power=2)
+     }
+     \arguments{
+             \item{nugget}{The value of the non-spatial variance, or nugget term.}
+              \item{decay}{The value of the decay term that sets the level of correlation given distance.}
+               \item{partial.sill}{The value of the spatial variance, or partial sill term.}
+            \item{distance}{The distance among observations for which the semivariance value is desired.}
+             \item{power}{The exponent specified in the powered exponential semivariogram. Defaults to 2, which corresponds to a Gaussian semivariance function.}
+     }
+     \details{
+      The models estimated by the \code{krige} package assume a powered exponential covariance structure. Each parametric covariance function for kriging models corresponds to a related semivariance function, given that highly correlated values will have a small variance in differences while uncorrelated values will vary widely. More specifically, semivariance is equal to half of the variance of the difference in a variable's values at a given distance. That is, the semivariance is defined as: \eqn{\gamma(h)=0.5*E[X(s+h)-X(s)]^2}, where \eqn{X} is the variable of interest, s is a location, and h is the distance from s to another location. 
+      
+            The powered exponential covariance structure implies that the semivariance follows the specific functional form of \eqn{\gamma(d)=\tau^2+\sigma^2(1-exp(-|\phi d|^p))} (Banerjee, Carlin, and Gelfand 2015, 27). A perk of this structure is that the special case of \emph{p=1} implies the commonly-used exponential semivariogram, and the special case of \emph{p=2} implies the commonly-used Gaussian semivariogram. Upon estimating a model, it is advisable to graph the functional form of the implied parametric semivariance structure. By substituting estimated values of the \code{nugget}, \code{decay}, and \code{partial.sill} terms, as well as specifying the correct \code{power} argument, it is possible to compute the implied semivariance from the model. The \code{distance} argument easily can be a vector of observed distance values.
+     }
+     \value{
+     Returns an object of class \code{numeric} with the parametric value of the semivariance corresponding to each input value of distance.
+     }
+     
+     \references{
+      Sudipto Banerjee, Bradley P. Carlin, and Alan E. Gelfand. 2015. \emph{Hierarchical Modeling and Analysis for Spatial Data}. 2nd ed. Boca Raton, FL: CRC Press.
+     }
+
+     \examples{
+#Examine Data
+summary(ContrivedData)
+
+#OLS Model for Residuals
+contrived.ols<-lm(y~x.1+x.2,data=ContrivedData);summary(contrived.ols)
+
+#Examine the Parametric Semivariogram Graphically with Population Parameter Values
+raw.semivar<-semivariogram(x=ContrivedData$y,east=ContrivedData$s.1,
+     north=ContrivedData$s.2)
+resid.semivar<-semivariogram(x=contrived.ols$residuals,east=ContrivedData$s.1,
+     north=ContrivedData$s.2,draw.plot=FALSE)
+points(resid.semivar,pch=3,col='blue')
+lines(exponential.semivariogram(nugget=0.5,decay=2.5,partial.sill=0.5,
+     distance=as.numeric(names(resid.semivar))),col='red')
+}
+
+\keyword{semivariogram}

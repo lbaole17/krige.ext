@@ -1,0 +1,11 @@
+useDynLib(krige.ext, .registration=TRUE)
+export("exponential.semivariogram",
+       "geweke",
+       "heidel.welch",
+       "krige.pred",
+       "krige.posterior",
+       "metropolis.krige",
+       "semivariogram")
+importFrom(Rcpp, evalCpp)
+importFrom("stats", "dist", "lm", "median", "quantile", "rbeta", "rgamma", "rnorm", "runif", "resid", "var", "vcov", "ar", "pnorm", "end", "start", "window")
+importFrom("graphics", "axis", "box", "plot")
