@@ -26,6 +26,12 @@ Please use it with cautions.
 
 <code>0.5.5</code>: Add some monitor functions for running large dataset.
 
+<code>0.5.6</code>: Add <code>mat.tool()</code> function.
+
+### Usage
+
+
+
 ### License
 
 The [krige.ext](https://github.com/lbaole17/krige.ext) package is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License, version 3, as published by the Free Software Foundation.
