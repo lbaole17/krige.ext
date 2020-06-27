@@ -14,7 +14,7 @@
 
 ### Overview
 
-This is an experimental version of the [<code>krige</code>]([https://CRAN.R-project.org/package=krige](https://cran.r-project.org/package=krige)) package. We will use this package to test experimental features that can be helpful for optimized computing and convinient for our own works. Standard use please refer to the original [CRAN](https://cran.r-project.org/) version. 
+This is an experimental version of the [<code>krige</code>]([https://CRAN.R-project.org/package=krige](https://cran.r-project.org/package=krige)) package. We will use this package to test experimental features that can be helpful for optimized computing and convinient for our own works. Standard use please refer to the original [CRAN](https://cran.r-project.org/) version, available at [https://CRAN.R-project.org/package=krige](https://cran.r-project.org/package=krige). 
 
 The features and functions of this experiment package may or may not end up in the next iteration of the standard version. 
 
