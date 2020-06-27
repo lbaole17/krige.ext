@@ -4,8 +4,6 @@
 
 [![Build Status](https://travis-ci.org/lbaole17/krige.ext.svg?branch=master)](https://travis-ci.org/) ![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)
 
-Build on the standard version:  [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/krige)](https://www.r-pkg.org/badges/version/krige)
-
 <!-- badges: end -->
 
 ---
