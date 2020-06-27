@@ -28,6 +28,12 @@ Please use it with cautions.
 
 <code>0.5.6</code>: Add <code>mat.tool()</code> function.
 
+### Installation
+
+```R
+devtools::install_github("lbaole17/krige.ext")
+```
+
 ### Usage
 
 
