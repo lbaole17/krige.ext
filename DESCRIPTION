@@ -1,7 +1,7 @@
 Package: krige.ext
-Version: 0.5.6.0001
-Title: Geospatial Kriging with Metropolis Sampling
-Date: 2020-06-23
+Version: 0.5.6.0002
+Title: Geospatial Kriging with Metropolis Sampling (Experimental Version)
+Date: 2020-06-28
 Author: Jason S. Byers [aut], Le Bao [aut, cre], Jamie Carson [aut], Jeff Gill [aut]
 Maintainer: Le Bao <lbaole17@gmail.com>
 Description: Estimates kriging models for geographical point-referenced data. Method is described in Monogan and Gill (2016) <doi:10.1017/psrm.2015.5>.
