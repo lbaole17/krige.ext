@@ -3,3 +3,4 @@
 *.so
 .Rhistory
 .Rapp.history
+.DS_Store
