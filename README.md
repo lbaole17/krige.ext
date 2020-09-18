@@ -8,7 +8,7 @@
 
 ---
 
-<code> krige.ext</code> is an experimental version of [R](https://www.r-project.org) package [<code>krige</code>](https://CRAN.R-project.org/package=krige), which estimates kriging models for geographical point-referenced data. Method is described in Monogan and Gill (2016), available at <https://doi.org/10.1017/psrm.2015.5>.
+<code> krige.ext</code> is an experimental version of [R](https://www.r-project.org) package [<code>krige</code>](https://CRAN.R-project.org/package=krige), which estimates kriging models for geographical point-referenced data. Method is described in Gill (2020), available at: <https://doi.org/10.1177/1532440020930197>.
 
 ---
 
