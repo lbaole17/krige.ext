@@ -6,6 +6,7 @@ export("exponential.semivariogram",
        "krige.posterior",
        "metropolis.krige",
        "semivariogram",
+       "krige.update",
        "mat.tool",
        "stop.mat.tool")
 importFrom(Rcpp, evalCpp)
