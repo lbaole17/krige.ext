@@ -131,7 +131,7 @@ round(cbind(exp(cred.pred+mean.logGas),Actual.Yield))
      \url{https://www.fractracker.org/map/us/west-virginia}
      }
      \references{
-      Jason S. Byers, James E. Monogan III & Jeff Gill. N.D. "Applied Geospatial Data Modeling in the Big Data Era: Challenges and Solutions."
+      Jason S. Byers & Jeff Gill. N.D. "Applied Geospatial Data Modeling in the Big Data Era: Challenges and Solutions."
      }
 \keyword{datasets}
 

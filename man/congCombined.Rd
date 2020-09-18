@@ -56,7 +56,7 @@ points(y=congCombined$dwnom1[congCombined$party==100],
      \samp{https://www.nhgis.org}
      }
      \references{
-      James E. Monogan III & Jeff Gill. 2016. "Measuring State and District Ideology with Spatial Realignment." \emph{Political Science Research and Methods} 4(1):97-121.
+      Jeff Gill. 2020. Measuring Constituency Ideology Using Bayesian Universal Kriging. \emph{State Politics & Policy Quarterly}.
      }
 \keyword{datasets}
 

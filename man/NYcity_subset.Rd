@@ -5,7 +5,7 @@
      \title{New York City CCES Respondents in 2008}
 
      \description{
-       These data are a subset of the 2008 Cooperative Congressional Election Survey (CCES) Common Content. Only 568 respondents from New York City are included, with predictors drawn from Monogan & Gill's (2016) model of self-reported ideology. The CCES data are merged with predictors on geographic location based on ZIP codes (from ArcGIS & TomTom) and county ruralism (from the USDA).
+       These data are a subset of the 2008 Cooperative Congressional Election Survey (CCES) Common Content. Only 568 respondents from New York City are included, with predictors drawn from Gill's (2020) model of self-reported ideology. The CCES data are merged with predictors on geographic location based on ZIP codes (from ArcGIS & TomTom) and county ruralism (from the USDA).
      }
      \usage{
 data(NYcity_subset)
@@ -145,7 +145,7 @@ cred.pred
      \url{http://www.ers.usda.gov/data-products/rural-urban-continuum-codes.aspx}
      }
      \references{
-      James E. Monogan III & Jeff Gill. 2016. "Measuring State and District Ideology with Spatial Realignment." \emph{Political Science Research and Methods} 4(1):97-121.
+      Jeff Gill. 2020. Measuring Constituency Ideology Using Bayesian Universal Kriging. \emph{State Politics & Policy Quarterly}.
      }
 \keyword{datasets}
 

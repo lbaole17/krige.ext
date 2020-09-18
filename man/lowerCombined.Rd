@@ -54,7 +54,7 @@ points(y=lowerCombined$np_score[lowerCombined$party=="D"],
      Shor, Boris and Nolan M. McCarty. 2011. "The Ideological Mapping of American Legislatures." \emph{American Political Science Review} 105(3):530-551.
      }
      \references{
-      James E. Monogan III & Jeff Gill. 2016. "Measuring State and District Ideology with Spatial Realignment." \emph{Political Science Research and Methods} 4(1):97-121.
+      Jeff Gill. 2020. Measuring Constituency Ideology Using Bayesian Universal Kriging. \emph{State Politics & Policy Quarterly}.
      }
 \keyword{datasets}
 
