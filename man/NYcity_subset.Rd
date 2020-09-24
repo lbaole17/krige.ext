@@ -142,7 +142,7 @@ cred.pred
      \url{https://www.arcgis.com/home/item.html?id=8d2012a2016e484dafaac0451f9aea24}
      \cr\cr
      United States Department of Agriculture. 2013. "2013 Rural-Urban Continuum Codes." \cr
-     \url{http://www.ers.usda.gov/data-products/rural-urban-continuum-codes.aspx}
+     \url{https://www.ers.usda.gov/data-products/rural-urban-continuum-codes.aspx}
      }
      \references{
       Jeff Gill. 2020. Measuring Constituency Ideology Using Bayesian Universal Kriging. \emph{State Politics & Policy Quarterly}.

@@ -128,7 +128,7 @@ round(cbind(exp(cred.pred+mean.logGas),Actual.Yield))
 \url{http://www.wvgs.wvnet.edu/www/datastat/devshales.htm}
      \cr\cr
      Accessed via: FracTracker. 2019. "West Virginia Oil & Gas Activity." \cr
-     \url{https://www.fractracker.org/map/us/west-virginia}
+     \url{https://www.fractracker.org/map/us/west-virginia/}
      }
      \references{
       Jason S. Byers & Jeff Gill. N.D. "Applied Geospatial Data Modeling in the Big Data Era: Challenges and Solutions."
